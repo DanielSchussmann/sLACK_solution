@@ -2985,3 +2985,28 @@ Traceback (most recent call last):
   File "/Users/dnsn/Desktop/Insight_scrape_SLACK_solution/scrapeHandler.py", line 36, in scarpe_and_stat
     time.sleep(6)
 KeyboardInterrupt
+2023-05-04 10:28:16,658 - Uncaught exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/code.py", line 90, in runcode
+    exec(code, self.locals)
+  File "<input>", line 6, in <module>
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/cli.py", line 407, in load_app
+    app = locate_app(self, import_name, name)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/flask/cli.py", line 260, in locate_app
+    __import__(module_name)
+  File "/Applications/PyCharm.app/Contents/plugins/python/helpers/pydev/_pydev_bundle/pydev_import_hook.py", line 21, in do_import
+    module = self._system_import(name, *args, **kwargs)
+  File "/Users/dnsn/Desktop/Insight_scrape_SLACK_solution/app.py", line 13, in <module>
+    client.chat_postMessage(channel=test_channel, text='input formatting is false')
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/slack/web/client.py", line 1077, in chat_postMessage
+    return self.api_call("chat.postMessage", json=kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/slack/web/base_client.py", line 150, in api_call
+    return self._sync_send(api_url=api_url, req_args=req_args)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/slack/web/base_client.py", line 241, in _sync_send
+    return self._urllib_api_call(
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/slack/web/base_client.py", line 378, in _urllib_api_call
+    ).validate()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/slack/web/slack_response.py", line 194, in validate
+    raise e.SlackApiError(message=msg, response=self)
+slack.errors.SlackApiError: The request to the Slack API failed.
+The server responded with: {'ok': False, 'error': 'invalid_auth'}
